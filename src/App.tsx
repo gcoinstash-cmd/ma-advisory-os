@@ -256,7 +256,7 @@ export default function App() {
       </section>
 
       {/* Deal Mandates Section */}
-      <section id="mandates" className="py-20 px-4 sm:px-8 bg-[#080a10] border-t border-slate-800">
+      <section id="mandates" className="py-20 px-4 sm:px-8 bg-[#080a10] border-t border-slate-800 scroll-mt-20">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <span className="text-xs font-mono text-blue-400 uppercase tracking-widest bg-blue-600/10 border border-blue-500/30 px-3 py-1 rounded-full">
@@ -347,7 +347,7 @@ export default function App() {
       </section>
 
       {/* Multiple Benchmarks & VDR Architecture */}
-      <section id="benchmarks" className="py-20 px-4 sm:px-8 bg-[#06080d]">
+      <section id="benchmarks" className="py-20 px-4 sm:px-8 bg-[#06080d] scroll-mt-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs font-mono text-blue-400 uppercase tracking-widest bg-blue-600/10 border border-blue-500/30 px-3 py-1 rounded-full">
@@ -423,6 +423,88 @@ export default function App() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Virtual Data Room Section */}
+      <section id="vdr" className="py-20 px-4 sm:px-8 bg-[#080b12] border-t border-slate-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto bg-[#0a0d16] border border-slate-800 rounded-3xl p-8 sm:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="text-xs font-mono text-blue-400 uppercase tracking-widest bg-blue-600/10 border border-blue-500/30 px-3 py-1 rounded-full">
+                VIRTUAL DATA ROOM
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-serif mt-4">
+                Secure Lower Middle-Market Deal Rooms
+              </h2>
+              <p className="text-slate-400 text-sm mt-3 leading-relaxed">
+                Institutional virtual data rooms equipped with dynamic watermarking, granular permission gating, and real-time bidder engagement telemetry.
+              </p>
+              <div className="mt-6 flex gap-4">
+                <button
+                  onClick={() => setIsAdminOpen(true)}
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold font-mono text-xs rounded-xl transition shadow-lg shadow-blue-600/25"
+                >
+                  ENTER DEAL ROOM [ PASSKEY: ma2026 ]
+                </button>
+              </div>
+            </div>
+
+            <div className="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl space-y-3 font-mono text-xs">
+              <div className="flex justify-between py-2 border-b border-slate-800">
+                <span className="text-slate-400">VDR Encryption:</span>
+                <span className="text-white font-bold">AES-256 GCM Cloud Storage</span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-slate-800">
+                <span className="text-slate-400">Watermarking:</span>
+                <span className="text-blue-400 font-bold">Dynamic IP & Email Imprint</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-slate-400">Compliance:</span>
+                <span className="text-emerald-400 font-bold">FINRA / SEC Diligence Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advisory Board / Team Section */}
+      <section id="team" className="py-20 px-4 sm:px-8 bg-[#06080d] border-t border-slate-800 scroll-mt-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-mono text-blue-400 uppercase tracking-widest bg-blue-600/10 border border-blue-500/30 px-3 py-1 rounded-full">
+              SENIOR LEADERSHIP
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-serif mt-4">
+              M&A Managing Directors & Deal Architects
+            </h2>
+            <p className="text-slate-400 text-sm mt-3">
+              Seasoned bulge-bracket veterans delivering institutional M&A execution to founder-led lower-middle market enterprises.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
+              <span className="text-[10px] font-mono text-blue-400 uppercase">TECH & SAAS M&A</span>
+              <h4 className="text-lg font-bold text-white mt-1">Marcus Reynolds</h4>
+              <p className="text-xs text-slate-400 mt-2">Former Morgan Stanley Tech Banking VP • Advised on 38 Closed Transactions ($3.1B EV).</p>
+            </div>
+
+            <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
+              <span className="text-[10px] font-mono text-cyan-400 uppercase">HEALTHCARE & LIFE SCIENCES</span>
+              <h4 className="text-lg font-bold text-white mt-1">Elena Rostova, CFA</h4>
+              <p className="text-xs text-slate-400 mt-2">Wharton MBA • Led 18 regional health system and pharma logistics recapitalizations.</p>
+            </div>
+
+            <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
+              <span className="text-[10px] font-mono text-emerald-400 uppercase">INDUSTRIALS & DEFENSE</span>
+              <h4 className="text-lg font-bold text-white mt-1">Harrison Cole</h4>
+              <p className="text-xs text-slate-400 mt-2">Former Lazard Director • Specialized in ITAR-cleared precision manufacturing and defense platforms.</p>
+            </div>
           </div>
         </div>
       </section>
