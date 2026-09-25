@@ -101,7 +101,7 @@ export default function App() {
         <span className="text-slate-600">•</span>
         <button 
           onClick={() => setIsAdminOpen(true)}
-          className="text-blue-400 hover:text-blue-300 font-mono text-[11px] underline ml-2 font-semibold"
+          className="text-blue-400 hover:text-blue-300 font-mono text-xs font-semibold underline ml-2 font-semibold"
         >
           [ ADVISOR DESK ]
         </button>
@@ -118,7 +118,7 @@ export default function App() {
               <span className="font-extrabold tracking-wider text-lg text-white font-serif flex items-center gap-1.5">
                 NEXUS<span className="text-blue-500">CAPITAL</span>
               </span>
-              <p className="text-[10px] tracking-widest text-slate-400 uppercase font-mono">M&A Advisory & Data Room OS</p>
+              <p className="text-xs font-semibold tracking-wider tracking-widest text-slate-400 uppercase font-mono">M&A Advisory & Data Room OS</p>
             </div>
           </div>
 
@@ -205,7 +205,7 @@ export default function App() {
                     <div className="w-3 h-3 rounded-full bg-blue-400 animate-ping"></div>
                     <span className="text-xs font-mono text-blue-400 uppercase tracking-wider">VDR ACTIVE BIDDER RADAR</span>
                   </div>
-                  <span className="text-xs text-slate-500 font-mono">TIER-1 ENCRYPTED</span>
+                  <span className="text-xs text-slate-300 font-mono">TIER-1 ENCRYPTED</span>
                 </div>
 
                 <div className="space-y-4 font-mono">
@@ -285,7 +285,7 @@ export default function App() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d15] via-transparent to-black/40"></div>
-                    <span className="absolute top-3 left-3 bg-black/70 backdrop-blur-md border border-slate-700/60 px-2.5 py-1 rounded-lg text-[10px] font-mono text-blue-400 uppercase">
+                    <span className="absolute top-3 left-3 bg-black/70 backdrop-blur-md border border-slate-700/60 px-2.5 py-1 rounded-lg text-xs font-semibold tracking-wider font-mono text-blue-400 uppercase">
                       {mandate.status}
                     </span>
                   </div>
@@ -299,13 +299,13 @@ export default function App() {
                       </div>
                       <span className="font-mono font-bold text-blue-400 text-sm block mb-1">{mandate.enterpriseValue}</span>
                       <div className="text-xs text-slate-300 font-mono font-semibold mb-2">{mandate.ebitda}</div>
-                      <p className="text-xs text-slate-400 leading-relaxed font-mono">
+                      <p className="text-base text-zinc-200 leading-relaxed leading-relaxed font-mono">
                         {mandate.industry}
                       </p>
                     </div>
 
                     <div className="space-y-2 pt-2 border-t border-slate-800/80">
-                      <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Investment Highlights:</span>
+                      <span className="text-xs font-semibold font-mono text-slate-400 uppercase tracking-wider block">Investment Highlights:</span>
                       <ul className="text-xs space-y-1 text-slate-300">
                         {mandate.highlights.slice(0, 3).map((item, idx) => (
                           <li key={idx} className="flex items-center space-x-1.5">
@@ -367,7 +367,7 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">SaaS & Enterprise Recurring Software: 8.5x – 12.0x</h4>
-                  <p className="text-xs text-slate-400 mt-1">Requires &gt;85% gross margins, sub-5% gross revenue churn, and net revenue expansion.</p>
+                  <p className="text-base text-zinc-200 leading-relaxed mt-1">Requires &gt;85% gross margins, sub-5% gross revenue churn, and net revenue expansion.</p>
                 </div>
               </div>
 
@@ -377,7 +377,7 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Specialized Healthcare & Clinical Ops: 7.0x – 9.5x</h4>
-                  <p className="text-xs text-slate-400 mt-1">High-margin cash pay aesthetics, outpatient surgery, and regional lab facilities.</p>
+                  <p className="text-base text-zinc-200 leading-relaxed mt-1">High-margin cash pay aesthetics, outpatient surgery, and regional lab facilities.</p>
                 </div>
               </div>
             </div>
@@ -385,28 +385,28 @@ export default function App() {
 
           <div className="lg:col-span-6 bg-[#090c13] border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
             <h3 className="text-lg font-bold text-white font-serif">Request Confidential Information Memorandum (CIM)</h3>
-            <p className="text-xs text-slate-400">Institutional buyers may register for VDR access upon bilateral NDA:</p>
+            <p className="text-base text-zinc-200 leading-relaxed">Institutional buyers may register for VDR access upon bilateral NDA:</p>
 
             <form onSubmit={handleCimSubmit} className="space-y-4">
               <div>
-                <label className="text-xs font-mono text-slate-300 block mb-1">Acquiring Entity Name</label>
-                <input required placeholder="Apex Private Equity Fund IV" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none font-mono" />
+                <label className="text-sm font-semibold font-mono text-slate-300 block mb-1">Acquiring Entity Name</label>
+                <input required placeholder="Apex Private Equity Fund IV" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none font-mono" />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-mono text-slate-300 block mb-1">Principal / Partner Name</label>
-                  <input required placeholder="David Henderson, Managing Director" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none" />
+                  <label className="text-sm font-semibold font-mono text-slate-300 block mb-1">Principal / Partner Name</label>
+                  <input required placeholder="David Henderson, Managing Director" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none" />
                 </div>
                 <div>
-                  <label className="text-xs font-mono text-slate-300 block mb-1">Fund AUM / Dry Powder</label>
-                  <input placeholder="$250M+ Dedicated Capital" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none" />
+                  <label className="text-sm font-semibold font-mono text-slate-300 block mb-1">Fund AUM / Dry Powder</label>
+                  <input placeholder="$250M+ Dedicated Capital" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none" />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-mono text-slate-300 block mb-1">Select Target Deal</label>
-                <select className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none font-mono">
+                <label className="text-sm font-semibold font-mono text-slate-300 block mb-1">Select Target Deal</label>
+                <select className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none font-mono">
                   <option>Project CloudScale ($42M EV - SaaS)</option>
                   <option>Project MedLogix ($68M EV - Pharma Logistics)</option>
                   <option>Project Apex Precision ($115M EV - Aerospace Defense)</option>
@@ -417,7 +417,7 @@ export default function App() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-lg shadow-blue-600/25 font-mono"
+                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-base font-semibold min-h-[44px] tracking-wider transition-all shadow-lg shadow-blue-600/25 font-mono"
                 >
                   EXECUTE NDA & REQUEST VDR ACCESS
                 </button>
@@ -487,23 +487,23 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
               <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
-              <span className="text-[10px] font-mono text-blue-400 uppercase">TECH & SAAS M&A</span>
+              <span className="text-xs font-semibold tracking-wider font-mono text-blue-400 uppercase">TECH & SAAS M&A</span>
               <h4 className="text-lg font-bold text-white mt-1">Marcus Reynolds</h4>
-              <p className="text-xs text-slate-400 mt-2">Former Morgan Stanley Tech Banking VP • Advised on 38 Closed Transactions ($3.1B EV).</p>
+              <p className="text-base text-zinc-200 leading-relaxed mt-2">Former Morgan Stanley Tech Banking VP • Advised on 38 Closed Transactions ($3.1B EV).</p>
             </div>
 
             <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
               <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
-              <span className="text-[10px] font-mono text-cyan-400 uppercase">HEALTHCARE & LIFE SCIENCES</span>
+              <span className="text-xs font-semibold tracking-wider font-mono text-cyan-400 uppercase">HEALTHCARE & LIFE SCIENCES</span>
               <h4 className="text-lg font-bold text-white mt-1">Elena Rostova, CFA</h4>
-              <p className="text-xs text-slate-400 mt-2">Wharton MBA • Led 18 regional health system and pharma logistics recapitalizations.</p>
+              <p className="text-base text-zinc-200 leading-relaxed mt-2">Wharton MBA • Led 18 regional health system and pharma logistics recapitalizations.</p>
             </div>
 
             <div className="p-6 bg-[#0a0d16] border border-slate-800 rounded-2xl group hover:border-blue-500/40 transition">
               <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Partner" className="w-full h-64 object-cover rounded-xl mb-4 group-hover:scale-[1.02] transition" />
-              <span className="text-[10px] font-mono text-emerald-400 uppercase">INDUSTRIALS & DEFENSE</span>
+              <span className="text-xs font-semibold tracking-wider font-mono text-emerald-400 uppercase">INDUSTRIALS & DEFENSE</span>
               <h4 className="text-lg font-bold text-white mt-1">Harrison Cole</h4>
-              <p className="text-xs text-slate-400 mt-2">Former Lazard Director • Specialized in ITAR-cleared precision manufacturing and defense platforms.</p>
+              <p className="text-base text-zinc-200 leading-relaxed mt-2">Former Lazard Director • Specialized in ITAR-cleared precision manufacturing and defense platforms.</p>
             </div>
           </div>
         </div>
@@ -517,7 +517,7 @@ export default function App() {
               <TrendingUp className="w-4 h-4 text-blue-500" />
               <span className="font-bold text-white font-serif tracking-wider">NEXUS CAPITAL ADVISORS</span>
             </div>
-            <p className="text-slate-400 text-[11px] leading-relaxed">
+            <p className="text-slate-400 text-xs font-semibold leading-relaxed">
               Middle-Market M&A Advisory & Virtual Data Room Operating System. Architected for boutique investment banks, sell-side brokers, and micro-PE sponsors.
             </p>
           </div>
@@ -544,7 +544,7 @@ export default function App() {
 
           <div className="space-y-3">
             <h5 className="font-mono text-white text-xs uppercase tracking-wider">Advisor Access</h5>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-xs font-semibold text-slate-400">
               Access the confidential deal room and mandate Kanban with the 1-click passkey:
             </p>
             <button
@@ -556,7 +556,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
+        <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs font-semibold text-slate-300">
           <div>© 2026 Nexus Capital Advisors LLC. Turnkey M&A Advisory & Virtual Data Room OS.</div>
           <div className="mt-2 sm:mt-0 font-mono text-blue-400">Passkey: ma2026</div>
         </div>
@@ -584,29 +584,29 @@ export default function App() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white font-serif">Execute Bilateral NDA</h3>
-                    <p className="text-xs text-slate-400">Instant Virtual Data Room (VDR) clearance</p>
+                    <p className="text-base text-zinc-200 leading-relaxed">Instant Virtual Data Room (VDR) clearance</p>
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1">Buyer / Fund Legal Name</label>
-                  <input required placeholder="Summit Equity Partners LP" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none" />
+                  <label className="text-sm font-semibold font-mono text-slate-400 block mb-1">Buyer / Fund Legal Name</label>
+                  <input required placeholder="Summit Equity Partners LP" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1">Corporate Email</label>
-                    <input required type="email" placeholder="henderson@summitequity.com" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none" />
+                    <label className="text-sm font-semibold font-mono text-slate-400 block mb-1">Corporate Email</label>
+                    <input required type="email" placeholder="henderson@summitequity.com" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none" />
                   </div>
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1">Direct Phone</label>
-                    <input required type="tel" placeholder="+1 (212) 555-0912" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none" />
+                    <label className="text-sm font-semibold font-mono text-slate-400 block mb-1">Direct Phone</label>
+                    <input required type="tel" placeholder="+1 (212) 555-0912" className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1">Selected Deal Mandate</label>
-                  <select className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-blue-500 outline-none font-mono">
+                  <label className="text-sm font-semibold font-mono text-slate-400 block mb-1">Selected Deal Mandate</label>
+                  <select className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-base min-h-[44px] text-white focus:border-blue-500 outline-none font-mono">
                     <option>Project CloudScale ($42M EV - SaaS)</option>
                     <option>Project MedLogix ($68M EV - Pharma Logistics)</option>
                     <option>Project Apex Precision ($115M EV - Aerospace Defense)</option>
@@ -616,7 +616,7 @@ export default function App() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-lg shadow-blue-600/25 mt-4 font-mono"
+                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-base font-semibold min-h-[44px] tracking-wider transition-all shadow-lg shadow-blue-600/25 mt-4 font-mono"
                 >
                   DIGITALLY EXECUTE NDA & ACCESS VDR
                 </button>
@@ -627,7 +627,7 @@ export default function App() {
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h4 className="text-xl font-bold text-white font-serif">NDA Executed</h4>
-                <p className="text-xs text-slate-400 max-w-xs mx-auto">
+                <p className="text-base text-zinc-200 leading-relaxed max-w-xs mx-auto">
                   Your VDR credentials and CIM document package have been generated. Check your corporate inbox for single sign-on access.
                 </p>
               </div>
